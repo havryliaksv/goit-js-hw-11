@@ -10,6 +10,7 @@ p {
 ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 img {
   display: block;
@@ -61,6 +62,125 @@ body {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+.search {
+  width: 500px;
+  min-height: 40px;
+  margin: 15px auto;
+  background: #444;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  /* outline: 1px solid tomato; */
+}
+.search-text {
+  width: 380px;
+  height: 40px;
+  padding: 10px 10px;
+  float: left;
+  color: #181616;
+  border: 0;
+  background: transparent;
+  border-radius: 3px 0 0 3px;
+}
+.search-text:focus {
+  outline: 0;
+  background: transparent;
+}
+
+.search-btn {
+  position: relative;
+  float: right;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 40px;
+  width: 120px;
+  color: #fff;
+  background: transparent;
+  border-left: 1px solid #fff;
+  border-radius: 0 3px 3px 0;
+}
+.search-btn:hover {
+  background: #98b9db;
+  color: #444;
+}
+.search-btn:active {
+  box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);
+}
+.search-btn:focus {
+  outline: 0;
+}
+
+.galery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.photo-card {
+  width: calc((100% - 48px) / 4);
+}
+
+.link-img {
+  display: inline-block;
+  width: 320px;
+  height: 210px;
+}
+img {
+  height: 100%;
+}
+b {
+  display: block;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.info-item {
+  text-align: center;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  border: 3px solid #2d2424;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: animloader 2s linear infinite;
+}
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  width: 6px;
+  height: 24px;
+  background: #2d2424;
+  transform: rotate(-45deg);
+  position: absolute;
+  bottom: -20px;
+  left: 46px;
+}
+
+@keyframes animloader {
+  0% {
+    transform: translate(-10px, -10px);
+  }
+  25% {
+    transform: translate(-10px, 10px);
+  }
+  50% {
+    transform: translate(10px, 10px);
+  }
+  75% {
+    transform: translate(10px, -10px);
+  }
+  100% {
+    transform: translate(-10px, -10px);
+  }
 }
 
 /*--------------------768px-1200px----------------------*/
