@@ -16,6 +16,7 @@ export default class ImageSearch {
     this.searchParam = '';
     this.page = 1;
     this.countImg = 3;
+    this.totalImg = 0;
   }
 
   async getRequestImg() {
