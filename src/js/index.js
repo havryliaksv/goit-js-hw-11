@@ -67,7 +67,7 @@ async function fetchGaleryImg() {
 function createGaleryMarkup(data) {
   if (!data) {
     console.log('Data is empty!');
-    return (mark = '');
+    return (markUp = '');
   }
   const markUp = data.hits
     .map(
